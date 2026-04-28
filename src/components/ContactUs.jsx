@@ -28,8 +28,8 @@ const ContactUs = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Message sent successfully ");
-        setShowPopup(true); // show popup
+        toast.success("Message sent successfully ✅");
+        setShowPopup(true); // 👈 show popup
         event.target.reset();
       } else {
         console.log("Error", data);
@@ -110,15 +110,15 @@ const ContactUs = () => {
         </button>
       </motion.form>
 
-      {/*  POPUP */}
+      {/* 🔥 POPUP */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
-            <h2 className="text-xl font-semibold mb-2 text-600">
-              Email Sent Successfully
+            <h2 className="text-xl font-semibold mb-2 text-green-600">
+              
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-              Thank you! Your message has been sent.
+             Thank you! Your message has been sent successfully.
             </p>
 
             <button
