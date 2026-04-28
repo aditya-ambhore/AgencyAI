@@ -28,7 +28,7 @@ const ContactUs = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Message sent successfully ✅");
+        toast.success("Message sent successfully ");
         setShowPopup(true); // 👈 show popup
         event.target.reset();
       } else {
@@ -110,7 +110,7 @@ const ContactUs = () => {
         </button>
       </motion.form>
 
-      {/* 🔥 POPUP */}
+      {/*  POPUP */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg max-w-sm w-full">
